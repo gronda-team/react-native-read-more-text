@@ -30,10 +30,10 @@ export default class ReadMore extends React.Component {
 
     if (fullHeight > limitedHeight) {
       this.setState({ shouldShowReadMore: true }, () => {
-        this.props.onReady && this.props.onReady();
+        this.props.onReady && this.props.onReady(true); // arg -> should show button or not
       });
     } else {
-      this.props.onReady && this.props.onReady();
+      this.props.onReady && this.props.onReady(false);
     }
   }
 
